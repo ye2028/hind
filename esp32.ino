@@ -5,7 +5,7 @@
 
 const char *ssid = "pi";
 const char *password = "pi12345678900";
-const char *flask_host = "http://192.168.67.220:5000";
+const char *flask_host = "http://192.168.8.220:5000";
 const char *start_scan_endpoint = "/simulate_motion";
 const char *confirm_endpoint = "/confirm_delivery";
 
@@ -36,8 +36,8 @@ void setup()
     pinMode(relayPin, OUTPUT);
     digitalWrite(relayPin, HIGH); // الريلاي الخاص بقفل الباب سيكون مطفئ مبدئيا
 
-    IPAddress local_IP(192, 168, 67, 111);
-    IPAddress gateway(192, 168, 67, 126);
+    IPAddress local_IP(192, 168, 8, 111);
+    IPAddress gateway(192, 168, 8, 1);
     IPAddress subnet(255, 255, 255, 0);
 
     WiFi.config(local_IP, gateway, subnet);
